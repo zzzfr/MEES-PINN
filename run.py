@@ -11,13 +11,6 @@ from src.PDE_category.Inverse import HeatInv, PoissonInv
 from src.PDE_category.NS import NS2D_BackStep, NS2D_Classic, NS2D_LidDriven, NS2D_LongTime
 from src.PDE_category.Poisson import Poisson1D, Poisson2D_Classic, Poisson2D_ManyArea, Poisson3D_ComplexGeometry, PoissonBoltzmann2D, PoissonND
 from src.PDE_category.Wave import Wave1D, Wave2D_Heterogeneous, Wave2D_LongTime
-152
-# [Burgers1D] + \
-#     [GrayScottEquation, KuramotoSivashinskyEquation] + \
-#     [Heat2D_ComplexGeometry, Heat2D_LongTime, Heat2D_Multiscale, Heat2D_VaryingCoef, HeatND] + \
-#     [Helmholtz2D] + \
-#     [HeatInv, PoissonInv] + \
-#     [NS2D_BackStep, NS2D_Classic,
 
 pde_list = [Burgers1D] + \
     [GrayScottEquation, KuramotoSivashinskyEquation] + \
@@ -59,6 +52,7 @@ if __name__ == "__main__":
                                     train_task.layout)
 
             trainer(pde=pde, policy=policy, train_task=train_task, config=command_args, iter_num=iter_num)
+
 
 
 
